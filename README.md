@@ -3,7 +3,7 @@ An API to get Malaysia bill prices. This back end is connected to my android app
 The api returns java POJO object which includes the id, billName, priceBracketOne - price_bracketEleven (priceBracketOne - price_bracketSeven for water)
 
 # Request Mapping
-To access electric/water bill prices by id, the mapping is /api/electric|water/id
+To access electric/water bill prices by id, the mapping is /api/electric|water/id  
 To update electric/water bill price, the PutMapping is just /api/electric|water, pass the json object  
 At the moment, no mapping is added to add a new bill provider.  
 
