@@ -1,6 +1,6 @@
 # MalaysiaBillPriceAPI
 An API to get Malaysia bill prices. This back end is connected to my android application "Utility Bill Calculator".  
-The api returns java POJO object which includes the id, billName, priceBracketOne - price_bracketEleven (priceBracketOne - price_bracketSeven for water)
+The api returns java POJO object -> JSON which includes the id, billName, priceBracketOne - price_bracketEleven (priceBracketOne - price_bracketSeven for water)
 
 # Request Mapping
 To access electric/water bill prices by id, the mapping is /api/electric|water/id  
