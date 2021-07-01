@@ -1,5 +1,7 @@
 package malaysia.bill.price.MalaysiaBillPrice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,5 +40,12 @@ public class WaterPriceController {
 		waterService.updatePrice(waterPrice);
 		
 		return waterPrice;
+	}
+	
+	// Define GetMapping to find all
+	@GetMapping("/water")
+	public List<WaterPrice> findAll() {
+		
+		return waterService.findAll();
 	}
 }

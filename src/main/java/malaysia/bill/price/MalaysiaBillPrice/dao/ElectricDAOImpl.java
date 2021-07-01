@@ -24,7 +24,20 @@ public class ElectricDAOImpl implements ElectricDAO {
 
 	@Override
 	public void updatePrice(ElectricPrice electricPrice) {
-		
+
 		entityManager.merge(electricPrice);
+	}
+
+	@Override
+	public List<ElectricPrice> findAll() {
+
+		// Create a query
+		Query theQuery = entityManager.createQuery("from ElectricPrice");
+
+		// Execute query and get result list
+		List<ElectricPrice> electricPrice = theQuery.getResultList();
+
+		// Return the results
+		return electricPrice;
 	}
 }

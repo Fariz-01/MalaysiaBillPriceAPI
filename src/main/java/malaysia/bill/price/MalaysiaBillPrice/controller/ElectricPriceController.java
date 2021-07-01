@@ -1,7 +1,6 @@
 package malaysia.bill.price.MalaysiaBillPrice.controller;
 
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,4 +41,21 @@ public class ElectricPriceController {
 
 		return electricPrice;
 	}
+	
+	// Add GetMapping to find all
+	@GetMapping("/electric")
+	public List<ElectricPrice> findAll() {
+		
+		return electricService.findAll();
+	}
 }
+
+
+
+
+
+
+
+
+
+

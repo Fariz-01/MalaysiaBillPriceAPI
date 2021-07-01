@@ -1,5 +1,7 @@
 package malaysia.bill.price.MalaysiaBillPrice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +27,12 @@ public class ElectricServiceImpl implements ElectricService {
 	public void updatePrice(ElectricPrice electricPrice) {
 		
 		electricDAO.updatePrice(electricPrice);
+	}
+
+	@Override
+	public List<ElectricPrice> findAll() {
+		
+		return electricDAO.findAll();
 	}
 
 }

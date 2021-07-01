@@ -1,5 +1,7 @@
 package malaysia.bill.price.MalaysiaBillPrice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +27,12 @@ public class WaterServiceImpl implements WaterService {
 	public void updatePrice(WaterPrice waterPrice) {
 		
 		waterDAO.updatePrice(waterPrice);
+	}
+
+	@Override
+	public List<WaterPrice> findAll() {
+		
+		return waterDAO.findAll();
 	}
 
 }
