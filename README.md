@@ -1,8 +1,18 @@
 # MalaysiaBillPriceAPI
 An API to get Malaysia bill prices. This back end is connected to my android application "Utility Bill Calculator".  
-The api returns java POJO object -> JSON which includes the id, billName, priceBracketOne - price_bracketEleven (priceBracketOne - price_bracketSeven for water).  
+The api returns java POJO object -> JSON which includes the id, billName, priceBracketOne -> price_bracketEleven (priceBracketOne -> price_bracketSeven for water).  
 The first price bracket is the minimum charge. 
 For Penang water, the last bracket (the seventh price bracket) is the surcharge.  
+
+# How to run the application
+1. Modify the application.properties datasource url, username and password to your MySQL username and password.  
+2. Your database should have two tables, electric_bill_price and water_bill_price with the following columns and rows:  
+electric_bill_price:  
+![electric_bill_price](https://i.imgur.com/bGZjOW3.png)  
+water_bill_price:  
+![water_bill_price](https://i.imgur.com/3jDmhVN.png)  
+4. Update the price if needed, the price here is updated as of 2 July 2021  
+3. Run the main application.
 
 # Request Mapping
 To access electric/water bill prices by id, the mapping is /api/electric|water/id  
